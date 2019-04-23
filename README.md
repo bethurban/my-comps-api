@@ -16,6 +16,12 @@ Routes:
   - Delete a saved search
   - Update a saved search
 
+  GET /api/searches
+  GET /api/searches/id
+  POST /api/searches
+  PUT /api/searches/id
+  DELETE /api/searches/id
+
 Models:
 
   Search
