@@ -1,6 +1,6 @@
 class Api::SearchesController < ApplicationController
 
-  before_action :set_search, only: [:show, :edit, :destroy]
+  before_action :set_search, only: [:show, :update, :destroy]
 
   def index
     render json: Search.all
@@ -42,6 +42,6 @@ class Api::SearchesController < ApplicationController
     end
 
     def search_params
-      params.require(:search).permit(:name, :address)
+      params.permit([:name, :address])
     end
 end
