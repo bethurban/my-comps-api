@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_202341) do
+ActiveRecord::Schema.define(version: 2019_04_25_175920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "searches", force: :cascade do |t|
+  create_table "homes", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.datetime "created_at", null: false
