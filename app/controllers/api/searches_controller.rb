@@ -1,47 +1,47 @@
-class Api::SearchesController < ApplicationController
+class Api::HomesController < ApplicationController
 
-  before_action :set_search, only: [:show, :update, :destroy]
+  before_action :set_home, only: [:show, :update, :destroy]
 
   def index
-    render json: Search.all
+    render json: Home.all
   end
 
   def create
-    search = Search.new(search_params)
-    if search.save
-      render json: search
+    home = Home.new(home_params)
+    if home.save
+      render json: home
     else
-      render json: { message: search.errors }, status: 400
+      render json: { message: home.errors }, status: 400
     end
   end
 
   def show
-    render json: @search
+    render json: @home
   end
 
   def update
-    if @search.update(search_params)
-      render json: @search
+    if @home.update(home_params)
+      render json: @home
     else
-      render json: { message: @search.errors }, status: 400
+      render json: { message: @home.errors }, status: 400
     end
   end
 
   def destroy
-    if @search.destroy
+    if @home.destroy
       render status: 204
     else
-      render json: { message: "Unable to destroy this search" }, status: 400
+      render json: { message: "Unable to destroy this saved home" }, status: 400
     end
   end
 
   private
 
-    def set_search
-      @search = Search.find_by(id: params[:id])
+    def set_home
+      @home = Home.find_by(id: params[:id])
     end
 
-    def search_params
+    def home_params
       params.permit([:name, :address])
     end
 end

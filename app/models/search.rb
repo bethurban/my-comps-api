@@ -1,2 +1,2 @@
-class Search < ApplicationRecord
+class Home < ApplicationRecord
 end
