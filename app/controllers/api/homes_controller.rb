@@ -42,6 +42,6 @@ class Api::HomesController < ApplicationController
     end
 
     def home_params
-      params.permit([:name, :address])
+      params.permit([:name, :address, :citystate])
     end
 end
