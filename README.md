@@ -22,3 +22,4 @@ to make via issue, email, or any other method with the owner of this repository.
 ## License
 
 This project has been licensed under the MIT open source license:
+https://github.com/bethurban/my-comps-api/blob/master/LICENSE
