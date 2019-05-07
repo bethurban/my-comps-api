@@ -1,29 +1,24 @@
-# README
+# My Comps API
 
-My Comps
+This is a Rails API for the My Comps React-Redux app (https://github.com/bethurban/my-comps-client).
 
-Users can search an address and get a list of comparable properties from Zillow.
-  - List includes link to property on Zillow, address, photo, last sold price, last sold date, bedrooms, bathrooms, lot size.
-  - Map is returned with comps pinned.
+This API allows logged-in users to save searched properties and later search for comparable properties using the client side of the app.
 
-Users can save a searched address to easily perform the search again in the future.
+## Installation
 
-Routes:
-  - Home page has sign-in option and search
-  - Signed-in users go back to home page to search and get list of saved searches
-  - Search returns searched property and details, plus map and list of comps with details. Signed-in users get the option to save search and give it a name ("Home").
-  - Clicking on a comp brings up more detailed view. User can click through to open in Zillow in new tab.
-  - Delete a saved search
-  - Update a saved search
+To use this app, clone this repo, then run 'bundle install' and 'rails s -p 3001'.
 
-  GET /api/searches
-  GET /api/searches/id
-  POST /api/searches
-  PUT /api/searches/id
-  DELETE /api/searches/id
+Then clone my-comps-client (https://github.com/bethurban/my-comps-client), run 'bundle install', and run 'yarn start.'
 
-Models:
+## Contributing
 
-  Search
-  - Name
-  - Address
+When contributing to this repository, please first discuss the change you wish
+to make via issue, email, or any other method with the owner of this repository.
+
+## Author
+
+[Beth Urban](https://github.com/bethurban) - initial work.
+
+## License
+
+This project has been licensed under the MIT open source license:
