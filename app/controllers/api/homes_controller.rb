@@ -3,7 +3,8 @@ class Api::HomesController < ApplicationController
   before_action :set_home, only: [:show, :update, :destroy]
 
   def index
-    render json: Home.all
+    @user = User.find_by(id: params[:user_id])
+    render json: @user.homes
   end
 
   def create
