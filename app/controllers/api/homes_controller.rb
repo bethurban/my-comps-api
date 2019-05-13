@@ -32,7 +32,7 @@ class Api::HomesController < ApplicationController
     if @home.destroy
       render status: 204
     else
-      render json: { message: "Unable to destroy this saved home" }, status: 400
+      render json: { message: "Unable to delete this saved address." }, status: 400
     end
   end
 
