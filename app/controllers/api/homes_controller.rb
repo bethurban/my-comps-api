@@ -20,14 +20,6 @@ class Api::HomesController < ApplicationController
     render json: @home
   end
 
-  def update
-    if @home.update(home_params)
-      render json: @home
-    else
-      render json: { message: @home.errors }, status: 400
-    end
-  end
-
   def destroy
     if @home.destroy
       render status: 204
